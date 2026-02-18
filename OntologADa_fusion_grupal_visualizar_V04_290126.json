@@ -1,0 +1,1137 @@
+{
+  "name": "Climate Adaptation",
+  "description": "Climate Adaptation Domain Ontology",
+  "version": "4.0.0",
+  "classes": {
+    "entity": {
+      "id": "entity",
+	  "name": "Entity",
+      "description": "Root class"
+    },
+    "adaptation_measure": {
+	  "id": "adaptation_measure",
+      "name": "Adaptation Measure",
+      "description": "Planned or implemented actions to adjust to actual or expected climate and its effects, ranging from incremental improvements to transformational change.",
+      "parent": "entity",
+      "synonyms": ["measure", "intervention", "solution", "strategy"]
+    },
+    "green_infrastructure": {
+      "id": "green_infrastructure",
+	  "name": "Green Infrastructure",
+      "description": "Nature-based or ecosystem-based adaptation measures.",
+      "parent": "adaptation_measure",
+      "synonyms": ["green infra", "nature-based solution", "nbs", "nature based solution", "ecosystem-based adaptation"]
+    },
+    "green_roof": {
+      "id": "green_roof",
+	  "name": "Green Roof",
+      "description": "A vegetated layer installed on building rooftops that provides cooling, stormwater retention, and ecological benefits.",
+      "parent": "green_infrastructure",
+      "synonyms": ["vegetated roof", "living roof", "eco-roof", "rooftop garden"]
+    },
+    "rain_garden": {
+      "id": "rain_garden",
+	  "name": "Rain Garden",
+      "description": "A shallow, planted depression designed to capture and absorb stormwater runoff, reducing flooding and improving water quality.",
+      "parent": "green_infrastructure",
+      "synonyms": ["bioretention", "bioswale", "infiltration garden"]
+    },
+    "urban_forest": {
+      "id": "urban_forest",
+	  "name": "Urban Forest",
+      "description": "A network of trees and green spaces within urban areas that provides shade, cooling, biodiversity, and improved air quality",
+      "parent": "green_infrastructure",
+      "synonyms": ["urban trees", "tree planting", "city forest", "urban woodland"]
+    },
+    "wetland_restoration": {
+      "id": "wetland_restoration",
+	  "name": "Wetland Restoration",
+      "description": "The process of rehabilitating degraded wetlands to recover their ecological functions, such as water filtration, flood mitigation, and habitat provision.",
+      "parent": "green_infrastructure",
+      "synonyms": ["wetland", "marsh restoration", "constructed wetland"]
+    },
+	"permeable_surfaces": {
+      "id": "permeable_surfaces",
+	  "name": "Permeable surfaces",
+      "description": "Surfaces that allow water infiltration to reduce runoff.",
+      "parent": "green_infrastructure",
+      "synonyms": ["permeable pavement", "porous pavement"]
+	},
+	"blue_green_infrastructure": {
+      "id": "blue_green_infrastructure",
+      "name": "Blue-Green Infrastructure",
+      "description": "Integrated network of natural and semi-natural green and blue elements that provide ecosystem services such as flood regulation, cooling and water management.",
+      "parent": "green_infrastructure",
+      "synonyms": ["bgi", "blue green infrastructure", "green-blue infrastructure"]
+	},
+    "grey_infrastructure": {
+      "id": "grey_infrastructure",
+	  "name": "Grey Infrastructure",
+      "description": "Engineered and built adaptation measures.",
+      "parent": "adaptation_measure",
+      "synonyms": ["hard infrastructure", "engineered solution"]
+    },
+    "flood_barrier": {
+      "id": "flood_barrier",
+	  "name": "Flood Barrier",
+      "description": "A physical structure designed to prevent or reduce the intrusion of floodwaters into vulnerable areas.",
+      "parent": "grey_infrastructure",
+      "synonyms": ["flood wall", "levee", "dike", "sea wall", "seawall"]
+    },
+    "drainage_system": {
+      "id": "drainage_system",
+	  "name": "Drainage System",
+      "description": "An engineered network that collects and channels excess water away from urban or natural areas to prevent flooding.",
+      "parent": "grey_infrastructure",
+      "synonyms": ["stormwater drain", "sewer", "culvert"]
+    },
+	"water_storage_infrastructure": {
+      "id": "water_storage_infrastructure",
+	  "name": "Water storage infrastructure",
+      "parent": "grey_infrastructure",
+      "synonyms": ["reservoir", "water tank", "retention basin"]
+	},
+	"building_retrofitting": {
+      "id": "building_retrofitting",
+	  "name": "Building retrofitting",
+      "description": "Structural modification of buildings to reduce climate risks.",
+      "parent": "adaptation_measure",
+      "synonyms": ["building adaptation", "structural retrofit"]
+	},
+	"cool_roof": {
+      "id": "cool_roof",
+	  "name": "Cool Roof",
+      "description": "A roofing system made of reflective or high‑emissivity materials that reduces heat absorption and lowers indoor temperatures.",
+      "parent": "adaptation_measure",
+      "synonyms": ["reflective roof", "white roof", "high-albedo roof"]
+    },
+	"microgrid": {
+      "id": "microgrid",
+      "name": "Microgrid",
+      "description": "Localized energy system capable of operating independently from the main grid to enhance energy resilience during disruptions.",
+      "parent": "adaptation_measure",
+      "synonyms": ["local energy grid", "distributed energy system", "resilient microgrid"]
+	},
+    "early_warning_system": {
+      "id": "early_warning_system",
+	  "name": "Early Warning System",
+      "description": "Systems for forecasting and communicating climate-related risks.",
+      "parent": "adaptation_measure",
+      "synonyms": ["ews", "warning system", "alert system", "forecasting", "forecasting system"]
+    },
+	"flood_forecasting": {
+      "id": "flood_forecasting",
+      "name": "Flood Forecasting",
+      "description": "Systems and models used to predict flood events and their potential magnitude to support early warning and preparedness.",
+      "parent": "early_warning_system",
+      "synonyms": ["flood prediction", "flood warning", "hydrological forecasting"]
+	},
+	"emergency_planning": {
+      "id": "emergency_planning",
+	  "name": "Emergency planning",
+      "description": "Preparedness and response planning for climate hazards.",
+      "parent": "adaptation_measure",
+      "synonyms": ["emergency response", "contingency planning"]
+	},
+	"evacuation_planning": {
+      "id": "evacuation_planning",
+      "name": "Evacuation Planning",
+      "description": "Preparedness planning for the organized relocation of populations from areas at risk due to imminent climate hazards.",
+      "parent": "emergency_planning",
+      "synonyms": ["evacuation plan", "evacuation", "emergency evacuation", "population relocation planning"]
+	},
+	"climate_smart_agriculture": {
+      "id": "climate_smart_agriculture",
+	  "name": "Climate-smart agriculture",
+      "description": "Strategic approach to transform agricultural systems to enhance resilience, support food security and address climate change adaptation.",
+      "parent": "adaptation_measure",
+      "synonyms": ["CSA", "climate-resilient agriculture"]
+	},
+	"water_management": {
+      "id": "water_management",
+	  "name": "Water management",
+      "description": "Operational measures to manage water resources under climate stress.",
+      "parent": "adaptation_measure",
+      "synonyms": ["water allocation", "water regulation"]
+	},
+	"stormwater_management": {
+      "id": "stormwater_management",
+      "name": "Stormwater Management",
+      "description": "Management practices and systems designed to control runoff, reduce flooding and improve water quality during rainfall events.",
+      "parent": "water_management",
+      "synonyms": ["urban drainage management", "runoff management"]
+	},
+	"heat_health_action_plan": {
+      "id": "heat_health_action_plan",
+	  "name": "Heat health action plan",
+      "description": "Operational plans to reduce health impacts during heat waves.",
+      "parent": "adaptation_measure",
+      "synonyms": ["heat action plan"]
+	},
+	"policy_and_planning": {
+      "id":"policy_and_planning",
+	  "name": "Policy and planning",
+      "description": "Policies, plans and regulatory instruments supporting climate adaptation.",
+      "parent": "adaptation_measure",
+      "synonyms": ["adaptation policy", "urban planning", "land-use planning"]
+	},
+	"governance_and_institutional_capacity": {
+      "id": "governance_and_institutional_capacity",
+	  "name": "Governance and institutional capacity",
+      "description": "Institutional arrangements and governance mechanisms for adaptation.",
+      "parent": "adaptation_measure",
+      "synonyms": ["institutional framework", "governance capacity", "governance mechanism"]
+	},
+	"capacity_building": {
+      "id": "capacity_building",
+	  "name": "Capacity building",
+      "description": "Activities aimed at strengthening skills, knowledge and capacities for adaptation.",
+      "parent": "adaptation_measure",
+      "synonyms": ["training", "education", "awareness raising"]
+	},
+	"monitoring_and_data_systems": {
+      "id": "monitoring_and_data_systems",
+	  "name": "Monitoring and data systems",
+      "description": "Systems for monitoring climate risks and adaptation performance.",
+      "parent": "adaptation_measure",
+      "synonyms": ["climate monitoring", "data collection"]
+	},
+    "climate_hazard": {
+      "id": "climate_hazard",
+	  "name": "Climate Hazard",
+      "description": "A climate‑related danger arising from atmospheric or environmental processes that can negatively affect human or natural systems.",
+      "parent": "entity",
+      "synonyms": ["hazard", "risk", "threat", "climate risk", "extreme event", "climate extreme", "natural hazard"]
+    },
+    "flood": {
+      "id": "flood",
+	  "name": "Flood",
+      "description": "An abnormal accumulation or overflow of water that inundates land which is normally dry.",
+      "parent": "climate_hazard",
+      "synonyms": ["flooding", "inundation", "overflow"]
+    },
+    "coastal_flood": {
+      "id": "coastal_flood",
+	  "name": "Coastal Flood",
+      "description": "Flooding in coastal zones caused by extreme tides, storm surges, waves, or temporary sea‑level increases.",
+      "parent": "flood",
+      "synonyms": ["storm surge", "storm_surge", "Storm surge", "storm-surge", "storm-driven coastal flooding", "tidal flood", "coastal inundation", "coastal flooding"]
+    },
+    "river_flood": {
+      "id": "river_flood",
+	  "name": "River Flood",
+      "description": "Overflow of rivers or streams due to heavy rainfall, snowmelt, or saturated soils.",
+      "parent": "flood",
+      "synonyms": ["fluvial flood", "riverine flood"]
+    },
+    "urban_flood": {
+      "id": "urban_flood",
+	  "name": "Urban Flood",
+      "description": "Localized flooding in urban areas triggered by intense rainfall, inadequate drainage, or highly impermeable surfaces.",
+      "parent": "flood",
+      "synonyms": ["urban flooding", "flash flood", "pluvial flood", "surface flood"]
+    },
+    "drought": {
+      "id": "drought",
+	  "name": "Drought",
+      "description": "A prolonged period of abnormally low water availability relative to the typical supply for a given region and time period.",
+      "parent": "climate_hazard",
+      "synonyms": ["water scarcity", "dry spell", "water shortage", "water deficit"]
+    },
+    "heat_wave": {
+      "id": "heat_wave",
+	  "name": "Heat Wave",
+      "description": "A sustained period of abnormally high atmospheric temperatures relative to the climatological average for a given location and time of year.",
+      "parent": "climate_hazard",
+      "synonyms": ["heatwave", "heat wave", "extreme heat", "heat event", "hot spell"]
+    },
+    "urban_heat_island": {
+      "id": "urban_heat_island",
+	  "name": "Urban Heat Island",
+      "description": "A localized climatic phenomenon characterized by significantly higher air temperatures in an urban area compared to its surrounding rural areas, primarily caused by the modification of land surfaces and human activities.",
+      "parent": "heat_wave",
+      "synonyms": ["uhi", "heat island", "urban heat", "urban overheating"]
+    },
+    "sea_level_rise": {
+      "id": "sea_level_rise",
+	  "name": "Sea Level Rise",
+      "description": "A long-term and gradual increase in the average global or regional sea level, primarily driven by thermal expansion of ocean water and the melting of land-based ice due to anthropogenic global warming.",
+      "parent": "climate_hazard",
+      "synonyms": ["slr", "rising seas", "coastal inundation"]
+    },
+    "storm": {
+      "id": "storm",
+	  "name": "Storm",
+      "description": "A disturbed state of the atmosphere characterized by strong winds, and often accompanied by heavy precipitation, thunder, lightning, or other severe phenomena.",
+      "parent": "climate_hazard",
+      "synonyms": ["severe storm", "strong storm", "heavy storm", "storm event"]
+    },
+	"hurricane": {
+      "id": "hurricane",
+      "name": "Hurricane",
+      "description": "A powerful tropical storm characterized by strong winds, heavy rainfall and storm surges, capable of causing widespread damage.",
+      "parent": "storm",
+      "synonyms": ["tropical cyclone", "typhoon", "cyclone"]
+	},
+    "wildfire": {
+      "id": "wildfire",
+	  "name": "Wildfire",
+      "description": "An uncontrolled and freely spreading fire burning predominantly in natural vegetation (e.g., forests, grasslands, scrublands) or on peatlands.",
+      "parent": "climate_hazard",
+      "synonyms": ["forest fire", "bushfire", "fire risk", "wildland fire"]
+    },
+    "sector": {
+      "id": "sector",
+	  "name": "Sector",
+      "description": "Thematic domain representing areas of activity, systems or environments referenced in climate-related knowledge.",
+      "parent": "entity",
+      "synonyms": ["domain", "thematic sector", "system"]
+    },
+	"urban_system": {
+      "id": "urban_system",
+	  "name": "Urban system",
+      "description": "Integrated socio-ecological and socio-technical system encompassing population, infrastructure, services and ecosystems in urban areas.",
+      "parent": "sector",
+      "synonyms": ["urban system", "city system", "urban socio-technical system", "urban socio-ecological system" ],
+      "ipcc_system_category": ["human_system", "socio_economic_system"],
+      "system_character": ["socio_technical", "socio_ecological"]
+	},
+	"urban_infrastructure": {
+      "id": "urban_infrastructure",
+	  "name": "Urban infrastructure",
+      "parent": "urban_system"
+	},
+	"urban_services": {
+	  "id": "urban_services",
+	  "name": "Urban services",
+      "description": "Essential public services provided in urban areas, including water, energy, transport and healthcare.",
+      "parent": "urban_system",
+      "synonyms": ["urban public services"]
+	},
+	"urban_governance": {
+      "id": "urban_governance",
+	  "name": "Urban governance",
+      "parent": "urban_system",
+      "synonyms": ["city governance", "municipal governance"]
+	},
+	"agriculture_and_food": {
+      "id": "agriculture_and_food",
+	  "name": "Agriculture and food",
+      "description": "Agricultural production, farming activities and food systems.",
+      "parent": "sector",
+      "synonyms": ["agriculture", "agricultural sector", "agri-food sector", "farming", "rural"],
+	  "ipcc_system_category": ["managed_system", "socio_economic_system"],
+	  "system_character": ["socio_ecological", "socio_economic"]
+	},
+	"crop_systems": {
+      "id": "crop_systems",
+	  "name": "Crop systems",
+      "parent": "agriculture_and_food",
+      "synonyms": ["crop production", "cropping systems"]
+	},
+	"livestock_systems": {
+      "id": "livestock_systems",
+	  "name": "Livestock systems",
+      "parent": "agriculture_and_food",
+      "synonyms": ["animal husbandry", "livestock production"]
+	},
+	"food_systems": {
+      "id": "food_systems",
+	  "name": "Food systems",
+      "parent": "agriculture_and_food",
+      "synonyms": ["food supply chain", "agri-food system"]
+	},
+	"water": {
+      "id": "water",
+	  "name": "Water",
+      "description": "Water resources, supply, management and hydrological systems.",
+      "parent": "sector",
+      "synonyms": ["water", "water system", "water sector"],
+	  "ipcc_system_category": ["natural_system", "managed_system"],
+      "system_character": ["socio_ecological", "technical"]
+	},
+	"water_resources": {
+	  "id": "water_resources",
+	  "name": "Water resources",
+      "description": "Natural freshwater resources including surface water and groundwater.",
+      "parent": "water",
+      "synonyms": ["freshwater resources", "drinking water", "potable water"],
+      "ipcc_system_category": ["natural_system"],
+      "system_character": ["ecological"]
+	},
+	"water_supply_and_distribution": {
+      "id": "water_supply_and_distribution",
+	  "name": "Water supply and distribution",
+      "parent": "water",
+      "synonyms": ["water supply", "water distribution system"]
+	},
+	"hydrological_systems": {
+      "id": "hydrological_systems",
+	  "name": "Hydrological systems",
+      "parent": "water",
+      "synonyms": ["hydrological cycle", "hydro system", "hydro"]
+	},
+	"health": {
+      "id": "health",
+	  "name": "Health",
+      "description": "Human health and healthcare systems.",
+      "parent": "sector",
+      "synonyms": ["health", "health sector", "health system"],
+      "ipcc_system_category": ["human_system"],
+      "system_character": ["socio_technical", "socio_economic"]
+	},
+	"public_health": {
+	  "id": "public_health",
+	  "name": "Public health",
+	  "description": "Population-level health systems focused on prevention, surveillance and health promotion.",
+	  "parent": "health",
+	  "synonyms": ["population health", "community health"],
+	  "ipcc_system_category": ["human_system"],
+	  "system_character": ["socio_technical", "socio_economic"]
+	},
+	"healthcare_systems": {
+      "id": "healthcare_systems",
+	  "name": "Healthcare systems",
+      "description": "Systems providing medical care, treatment and health services to individuals and communities.",
+      "parent": "health",
+      "synonyms": ["healthcare", "medical services", "hospital system"],
+      "ipcc_system_category": ["human_system"],
+      "system_character": ["socio_technical"]
+	},	
+	"energy": {
+      "id": "energy",
+	  "name": "Energy",
+      "description": "Energy production, transmission, distribution and supply systems.",
+      "parent": "sector",
+      "synonyms": ["energy", "energy sector", "power sector"],
+	  "ipcc_system_category": ["managed_system", "socio_economic_system"],
+      "system_character": ["socio_technical", "socio_economic"]
+	},
+	"electricity_systems": {
+	  "id": "electricity_systems",
+	  "name": "Electricity systems",
+      "description": "Systems for electricity generation, transmission and distribution.",
+      "parent": "energy",
+      "synonyms": ["electricity", "electricity grid", "power grid"],
+      "ipcc_system_category": ["managed_system", "socio_economic_system"],
+      "system_character": ["socio_technical"]
+	},
+	"energy_production": {
+      "id": "energy_production",
+	  "name": "Energy production",
+      "parent": "energy",
+      "synonyms": ["power generation", "energy generation", "power"]
+	},
+	"energy_transmission": {
+      "id": "energy_transmission",
+	  "name": "Energy transmission",
+      "parent": "energy",
+      "synonyms": ["power transmission"]
+	},
+	"infrastructure_and_networks": {
+      "id": "infrastructure_and_networks",
+	  "name": "Infrastructure and networks",
+      "description": "Built infrastructure and networked systems supporting transport, energy, water and communication.",
+      "parent": "sector",
+      "synonyms": ["infrastructure", "critical infrastructure", "network system"],
+	  "ipcc_system_category": ["human_system", "socio_economic_system"],
+	  "system_character": ["socio_technical"]
+	},
+	"transport_infrastructure": {
+	  "id": "transport_infrastructure",
+	  "parent": "infrastructure_and_networks"
+	},
+	"road_infrastructure": {
+      "id": "road_infrastructure",
+	  "parent": "transport_infrastructure",
+	  "synonyms": ["road", "roads"]
+	},
+	"rail_infrastructure": {
+      "id": "rail_infrastructure",
+	  "parent": "transport_infrastructure",
+	  "synonyms": ["railway", "railways"]
+	},
+	"air_transport_infrastructure": {
+      "id": "air_transport_infrastructure",
+	  "parent": "transport_infrastructure",
+	  "synonyms": ["airport", "airports"]
+	},
+	"port_and_maritime_infrastructure": {
+      "id": "port_and_maritime_infrastructure",
+	  "parent": "transport_infrastructure"
+	},
+	"telecommunication_networks": {
+      "id": "telecommunication_networks",
+	  "parent": "infrastructure_and_networks"
+	},
+	"ecosystems": {
+      "id": "ecosystems",
+	  "name": "Ecosystems",
+      "description": "Terrestrial, freshwater and marine ecosystems and biodiversity.",
+      "parent": "sector",
+      "synonyms": ["ecosystem", "environmental system", "natural system"],
+      "ipcc_system_category": ["natural_system"],
+      "system_character": ["ecological"]
+	},
+	"forest_ecosystem": {
+      "id": "forest_ecosystem",
+	  "name": "Forest ecosystem",
+      "description": "Terrestrial ecosystem dominated by trees and woody vegetation.",
+      "parent": "ecosystems",
+      "synonyms": ["forest system"]
+	},
+	"wetland_ecosystem": {
+      "id": "wetland_ecosystem",
+	  "name": "Wetland ecosystem",
+      "description": "Ecosystem characterized by water saturation, including marshes, swamps and peatlands.",
+      "parent": "ecosystems",
+      "synonyms": ["wetland system"]
+	},
+	"coastal_ecosystem": {
+      "id": "coastal_ecosystem",
+	  "name": "Coastal ecosystem",
+      "description": "Ecosystem located at the interface between land and sea, including beaches, estuaries and deltas.",
+      "parent": "ecosystems",
+      "synonyms": ["coastal system"]
+	},
+	"mangrove_ecosystem": {
+      "id": "mangrove_ecosystem",
+	  "name": "Mangrove ecosystem",
+      "description": "Coastal ecosystem dominated by mangrove vegetation in tropical and subtropical regions.",
+      "parent": "ecosystems"
+	},
+	"urban_ecosystem": {
+      "id": "urban_ecosystem",
+	  "name": "Urban ecosystem",
+      "description": "Ecosystem formed by interactions between living organisms and the built environment in urban areas.",
+      "parent": "ecosystems",
+      "synonyms": ["urban ecological system"]
+	},
+	"freshwater_ecosystem": {
+      "id": "freshwater_ecosystem",
+	  "name": "Freshwater ecosystem",
+      "parent": "ecosystems"
+	},
+	"marine_ecosystem": {
+      "id": "marine_ecosystem",
+	  "name": "Marine ecosystem",
+      "parent": "ecosystems"
+	},
+    "impact": {
+      "id": "impact",
+	  "name": "Impact",
+      "description": "Negative effects or consequences affecting human, natural or socio-technical systems.",
+      "parent": "entity",
+      "synonyms": ["negative effect", "adverse impact", "damage", "harm", "loss"]
+    },
+	"climate_impact": {
+	  "id": "climate_impact",
+	  "name": "Climate Impact",
+      "description": "Negative consequences and damages directly or indirectly caused by climate hazards.",
+      "parent": "impact",
+      "synonyms": ["hazard impact", "climate damage", "climate-induced effect", "extreme event consequence", "climate consequence"]
+	},
+	"infrastructure_impact": {
+      "id": "infrastructure_impact",
+	  "name": "Infrastructure Impact",
+      "description": "Impacts on infrastructure systems including physical damage, operational disruption and service failure.",
+      "parent": "climate_impact",
+      "synonyms": ["critical infrastructure impact", "built environment impact", "system disruption"]
+	},
+	"infrastructure_damage": {
+      "id": "infrastructure_damage",
+	  "name": "Infrastructure Damage",
+      "description": "Physical damage to built infrastructure including buildings, roads, bridges and utilities.",
+      "parent": "infrastructure_impact",
+      "synonyms": ["structural damage", "asset damage", "physical infrastructure failure"]
+	},
+	"energy_security_impact": {
+      "id": "energy_security_impact",
+	  "name": "Energy Security Impact",
+      "description": "Disruptions to energy production, transmission and distribution systems.",
+      "parent": "infrastructure_impact",
+      "synonyms": ["power outage", "power_outage", "power failre", "electricity outage", "grid outage", "energy system disruption", "electricity impact"]
+	},
+	"transportation_impact": {
+      "id": "transportation_impact",
+	  "name": "Transportation Impact",
+      "description": "Disruptions to transportation networks including roads, railways, ports and airports.",
+      "parent": "infrastructure_impact",
+     "synonyms": ["transport disruption", "mobility impact", "logistics disruption"]
+	},
+	"agricultural_loss": {
+      "id": "agricultural_loss",
+	  "name": "Agricultural Loss",
+      "description": "Losses in crop yields, livestock productivity and agricultural assets.",
+      "parent": "climate_impact",
+      "synonyms": ["crop loss", "yield reduction", "harvest failure", "livestock loss"]
+	},
+	"economic_impact": {
+      "id": "economic_impact",
+	  "name": "Economic Impact",
+      "description": "Broader economic effects including market disruption, productivity loss and long-term economic consequences.",
+      "parent": "climate_impact",
+      "synonyms": ["economic effect", "financial impact", "market disruption"]
+	},
+	"economic_loss": {
+      "id": "economic_loss",
+	  "name": "Economic Loss",
+      "description": "Direct financial losses including property damage, repair costs and business interruption.",
+      "parent": "economic_impact",
+      "synonyms": ["financial loss", "monetary loss", "damage cost"]
+	},
+	"health_impact": {
+      "id": "health_impact",
+	  "name": "Health Impact",
+      "description": "Adverse effects on physical and mental health including illness, injury and mortality.",
+      "parent": "climate_impact",
+      "synonyms": ["public health impact", "morbidity", "mortality", "health consequence"]
+	},
+	"psychological_impact": {
+      "id": "psychological_impact",
+	  "name": "Psychological Impact",
+      "description": "Mental health effects including trauma, anxiety, stress and psychological distress.",
+      "parent": "health_impact",
+      "synonyms": ["mental health impact", "emotional distress", "trauma"]
+	},
+	"social_impact": {
+      "id": "social_impact",
+	  "name": "Social Impact",
+      "description": "Effects on social systems, community cohesion, equity and quality of life.",
+      "parent": "climate_impact",
+      "synonyms": ["societal impact", "community disruption", "social consequence"]
+	},
+	"displacement_impact": {
+      "id": "displacement_impact",
+	  "name": "Displacement Impact",
+      "description": "Forced migration, displacement and relocation of populations due to climate hazards.",
+      "parent": "social_impact",
+      "synonyms": ["climate migration", "forced relocation", "population displacement"]
+	},
+	"food_security_impact": {
+      "id": "food_security_impact",
+	  "name": "Food Security Impact",
+      "description": "Disruptions to food availability, access and stability leading to food insecurity.",
+      "parent": "social_impact",
+      "synonyms": ["food system disruption", "hunger risk", "nutritional insecurity"]
+	},
+	"water_security_impact": {
+      "id": "water_security_impact",
+	  "name": "Water Security Impact",
+      "description": "Impacts on water availability, quality and access to safe drinking water.",
+      "parent": "climate_impact",
+      "synonyms": ["water scarcity impact", "water quality degradation", "hydrological stress"]
+	},
+	"environmental_impact": {
+      "id": "environmental_impact",
+	  "name": "Environmental Impact",
+      "description": "Damage to natural ecosystems, biodiversity loss and degradation of ecosystem services.",
+      "parent": "climate_impact",
+      "synonyms": ["ecological impact", "ecosystem degradation", "environmental damage"]
+	},
+	"biodiversity_loss": {
+      "id": "biodiversity_loss",
+	  "name": "Biodiversity Loss",
+      "description": "Reduction in species diversity, habitat loss and ecosystem degradation.",
+      "parent": "environmental_impact",
+      "synonyms": ["species loss", "habitat destruction", "wildlife decline"]
+	},
+	"compound_impact": {
+      "id": "compound_impact",
+	  "name": "Compound Impact",
+      "description": "Cascading and interconnected impacts affecting multiple systems simultaneously.",
+      "parent": "climate_impact",
+      "synonyms": ["cascading impact", "systemic impact", "multi-sectoral impact"]
+	},
+	"outcome": {
+	  "id": "outcome",
+	  "name": "Outcome",
+      "description": "Resulting effect or consequence produced by an action, intervention or process.",
+      "parent": "entity",
+      "synonyms": ["result", "effect", "outcome effect", "resulting change"]
+	},
+	"adaptation_outcome": {
+      "id": "adaptation_outcome",
+	  "name": "Adaptation Outcome",
+      "description": "Positive and measurable outcomes resulting from the implementation of climate adaptation measures.",
+      "parent": "outcome",
+      "synonyms": ["adaptation benefit", "adaptive outcome", "resilience benefit", "positive adaptation effect"]
+	},
+	"risk_reduction": {
+      "id": "risk_reduction",
+	  "name": "Risk Reduction",
+      "description": "Reduction in climate-related risk exposure, sensitivity or potential damages.",
+      "parent": "adaptation_outcome",
+      "synonyms": ["risk mitigation", "risk decrease", "hazard risk reduction"]
+	},
+	"flood_risk_reduction": {
+      "id": "flood_risk_reduction",
+	  "name": "Flood Risk Reduction",
+      "description": "Reduced likelihood or severity of flooding events and associated damages.",
+      "parent": "risk_reduction",
+      "synonyms": ["flood protection", "flood mitigation", "inundation risk reduction", "flood control"]
+	},
+	"heat_stress_reduction": {
+      "id": "heat_stress_reduction",
+	  "name": "Heat Stress Reduction",
+      "description": "Reduction of heat exposure and heat-related stress in people and urban environments.",
+      "parent": "risk_reduction",
+      "synonyms": ["urban cooling", "temperature reduction", "heat mitigation", "cooling", "cooling effect", "heat reduction"]
+	},
+	"water_retention": {
+      "id": "water_retention",
+	  "name": "Water Retention",
+      "description": "Improved water storage, infiltration and groundwater recharge.",
+      "parent": "adaptation_outcome",
+      "synonyms": ["water retention benefit", "water storage improvement", "groundwater recharge"]
+	},
+	"resilience_increase": {
+      "id": "resilience_increase",
+	  "name": "Resilience Increase",
+      "description": "Enhanced capacity of systems, communities or ecosystems to absorb, adapt and recover from climate impacts.",
+      "parent": "adaptation_outcome",
+      "synonyms": ["increased resilience", "adaptive capacity enhancement", "system robustness"]
+	},
+	"ecosystem_service_enhancement": {
+      "id": "ecosystem_service_enhancement",
+	  "name": "Ecosystem Service Enhancement",
+      "description": "Improvement of ecosystem services such as cooling, flood regulation and air purification.",
+      "parent": "adaptation_outcome",
+      "synonyms": ["ecosystem benefit", "nature-based benefit", "ecosystem function enhancement"]
+	},
+	"health_benefit": {
+      "id": "health_benefit",
+	  "name": "Health Benefit",
+      "description": "Improved physical and mental health outcomes and reduced health risks.",
+      "parent": "adaptation_outcome",
+      "synonyms": ["public health benefit", "health improvement", "wellbeing enhancement"]
+	},
+	"economic_benefit": {
+      "id": "economic_benefit",
+	  "name": "Economic Benefit",
+      "description": "Avoided economic losses, cost savings and improved economic stability due to adaptation.",
+      "parent": "adaptation_outcome",
+      "synonyms": ["avoided damage cost", "economic resilience", "cost savings"]
+	},
+	"air_quality_improvement": {
+      "id": "air_quality_improvement",
+	  "name": "Air Quality Improvement",
+      "description": "Reduction of air pollutants and improvement of ambient air quality.",
+      "parent": "adaptation_outcome",
+      "synonyms": ["pollution reduction", "air purification", "emission reduction"]
+    },
+	"location": {
+      "id": "location",
+      "name": "Location",
+      "parent": "entity",
+      "synonyms": ["place", "area", "geographical area", "region"]
+     },
+	 "geographic_region": {
+      "id": "geographic_region",
+      "name": "Geographic Region",
+      "description": "Geographic area where climate events occur",
+      "parent": "location",
+      "synonyms": ["location", "area", "region", "zone"]
+    },
+    "urban_area": {
+      "id": "urban_area",
+      "name": "Urban Area",
+	  "description": "A densely built environment characterized by high population concentration, infrastructure, and economic activity.",
+      "parent": "location",
+      "synonyms": ["city", "urban", "metropolitan", "municipality"]
+    },
+    "coastal_zone": {
+      "id": "coastal_zone",
+      "name": "Coastal Zone",
+	  "description": "A geographic area where land meets the sea, influenced by coastal processes, tides, and marine dynamics.",
+      "parent": "location",
+      "synonyms": [ "coast",  "coastal area", "shoreline", "littoral"]
+    },
+    "river_basin": {
+      "id": "river_basin",
+      "name": "River Basin",
+	  "description": "The land area drained by a river and its tributaries, forming a connected hydrological system.",
+      "parent": "geographic_context",
+      "synonyms": ["catchment", "watershed"]
+    },
+	"climate_region": {
+      "id": "climate_region",
+      "name": "Climate Region",
+	  "description": "A large geographic area defined by shared climatic patterns, such as Mediterranean, Atlantic, or Continental conditions.",
+      "parent": "location",
+      "synonyms": ["climatic region"]
+    },
+	"mediterranean": {
+      "id": "mediterranean",
+      "name": "Mediterranean Region",
+      "parent": "climate_region",
+      "synonyms": ["mediterranean climate"]
+    },
+    "alpine": {
+      "id": "alpine",
+      "name": "Alpine Region",
+      "parent": "climate_region"
+    },
+    "atlantic": {
+      "id": "atlantic",
+      "name": "Atlantic Region",
+      "parent": "climate_region"
+    },
+    "continental": {
+      "id": "continental",
+      "name": "Continental Region",
+      "parent": "climate_region"
+    },
+    "nordic": {
+      "id": "nordic",
+      "name": "Nordic Region",
+      "parent": "climate_region"
+    },
+    "arctic": {
+      "id": "arctic",
+      "name": "Arctic Region",
+      "parent": "climate_region",
+      "synonyms": ["polar region"]
+    },
+    "boreal": {
+      "id": "boreal",
+      "name": "Boreal Region",
+      "parent": "climate_region"
+    },
+    "temperate": {
+      "id": "temperate",
+      "name": "Temperate Region",
+      "parent": "climate_region"
+    },
+    "subtropical": {
+      "id": "subtropical",
+      "name": "Subtropical Region",
+      "parent": "climate_region"
+    },
+	"geographic_context": {
+      "id": "geographic_context",
+      "name": "Geographic Context",
+	  "description": "A physical setting defined by distinctive landforms—such as islands, peninsulas, deltas, or mountains—that shape environmental and socio‑economic conditions.",
+      "parent": "location"
+    },
+	"island": {
+      "id": "island",
+      "name": "Island",
+      "parent": "geographic_context"
+    },
+    "small_island": {
+      "id": "small_island",
+      "name": "Small Island",
+      "parent": "island",
+      "synonyms": ["sids", "small island developing states"]
+    },
+    "archipelago": {
+      "id": "archipelago",
+      "name": "Archipelago",
+      "parent": "geographic_context"
+    },
+    "peninsula": {
+      "id": "peninsula",
+      "name": "Peninsula",
+      "parent": "geographic_context"
+    },
+    "delta": {
+      "id": "delta",
+      "name": "Delta",
+      "parent": "geographic_context"
+    },
+    "mountain": {
+      "id": "mountain",
+      "name": "Mountain",
+      "parent": "geographic_context",
+      "synonyms": ["mountains"]
+    },
+    "lowland": {
+      "id": "lowland",
+      "name": "Lowland",
+      "parent": "geographic_context"
+    },
+    "highland": {
+      "id": "highland",
+      "name": "Highland",
+      "parent": "geographic_context"
+    },
+    "valley": {
+      "id": "valley",
+      "name": "Valley",
+      "parent": "geographic_context"
+    },
+	"world_region": {
+      "id": "world_region",
+      "name": "World Region",
+	  "description": "A broad global area grouped by geographic, cultural, or geopolitical characteristics, such as Europe, Sub‑Saharan Africa, or South Asia.",
+      "parent": "location"
+    },
+	"africa": {
+      "id": "africa",
+      "name": "Africa",
+      "parent": "world_region"
+    },
+    "asia": {
+      "id": "asia",
+      "name": "Asia",
+      "parent": "world_region"
+    },
+    "europe": {
+      "id": "europe",
+      "name": "Europe",
+      "parent": "world_region"
+    },
+    "americas": {
+      "id": "americas",
+      "name": "Americas",
+      "parent": "world_region"
+    },
+    "oceania": {
+      "id": "oceania",
+      "name": "Oceania",
+      "parent": "world_region"
+    },
+    "tropics": {
+      "id": "tropics",
+      "name": "Tropics",
+      "parent": "world_region"
+    },
+    "arid": {
+      "id": "arid",
+      "name": "Arid Regions",
+      "parent": "world_region"
+    },
+    "semi_arid": {
+      "id": "semi_arid",
+      "name": "Semi-arid Regions",
+      "parent": "world_region"
+    },
+    "coastal_regions": {
+      "id": "coastal_regions",
+      "name": "Coastal Regions",
+      "parent": "world_region"
+    },
+	"social_group": {
+      "id": "social_group",
+      "name": "Social Group",
+	  "description": "A set of individuals who share common characteristics, identities, or social conditions that shape their interactions, behaviors, and collective experiences within a society.",
+      "parent": "entity",
+      "synonyms": ["population group", "community"]
+    },
+	"vulnerable_group": {
+      "id": "vulnerable_group",
+      "name": "Vulnerable Group",
+	  "description": "A population with limited capacity to cope with or recover from adverse impacts due to social, economic, or environmental disadvantages.",
+      "parent": "social_group",
+      "synonyms": ["vulnerable population", "at-risk group"]
+    },
+	"low_income": {
+      "id": "low_income",
+      "name": "Low-income Population",
+	  "description": "A social group with limited financial resources, often facing restricted access to services, opportunities, and climate resilience.",
+      "parent": "vulnerable_group",
+      "synonyms": ["poor", "economically disadvantaged"]
+    },
+    "marginalized": {
+      "id": "marginalized",
+      "name": "Marginalized Community",
+	  "description": "A population group experiencing social, economic, or political exclusion that reduces access to resources, rights, and decision‑making.",
+      "parent": "vulnerable_group"
+    },
+    "elderly": {
+      "id": "elderly",
+      "name": "Elderly People",
+      "parent": "vulnerable_group",
+      "synonyms": ["older adults", "senior citizens"]
+    },
+    "children": {
+      "id": "children",
+      "name": "Children",
+      "parent": "vulnerable_group",
+      "synonyms": ["youth", "minors"]
+    },
+    "informal_settlement": {
+      "id": "informal_settlement",
+      "name": "Informal Settlement",
+	  "description": "A vulnerable residential area lacking formal planning, secure tenure, or adequate services.",
+      "parent": "vulnerable_group",
+      "synonyms": ["slum", "deprived area"]
+    }
+  },
+  "relations": {
+    "CAUSES": {
+      "id": "causes",
+      "name": "causes",
+      "domain": ["climate_hazard"],
+      "range": ["impact"],
+      "synonyms": ["triggers", "leads to", "induces", "results in"],
+      "inverse": "is_caused_by",
+      "description": "Causal relationship where a climate hazard produces a negative impact."
+	},  
+    "ADDRESSES": {
+      "id": "addresses",
+      "name": "addresses",
+      "domain": ["adaptation_measure"],
+      "range": ["impact", "climate_hazard"],
+      "synonyms": ["tackles", "targets", "mitigates", "combats"],
+      "inverse": "is_addressed_by",
+      "description": "Indicates that a measure is designed to mitigate an impact or manage a hazard."
+    },
+    "PRODUCES": {
+      "id": "produces",
+      "name": "produces",
+      "domain": ["adaptation_measure"],
+      "range": ["adaptation_outcome"],
+      "synonyms": ["leads to", "generates", "results in", "achieves"],
+      "inverse": "is_produced_by",
+      "description": "Links an adaptation measure to its intended positive result or benefit."
+    },
+    "MITIGATES": {
+      "id": "mitigates",
+      "name": "mitigates",
+      "domain": ["adaptation_outcome"],
+      "range": ["impact"],
+      "synonyms": ["reduces", "lessens", "alleviates", "decreases"],
+      "inverse": "is_mitigated_by",
+      "description": "Effectiveness relationship: the positive outcome reduces the severity of a negative impact."
+    },
+    "BURDENS": {
+      "id": "burdens",
+      "name": "burdens",
+      "domain": ["impact"],
+      "range": ["social_group"],
+      "synonyms": ["affects", "pressures", "impacts negatively", "burdens"],
+      "inverse": "is_burdened_by",
+      "description": "Connects an impact to the social or vulnerable group that suffers the consequences."
+    },
+    "EXPERIENCES": {
+      "id": "experiences",
+      "name": "experiences",
+      "domain": ["sector"],
+      "range": ["impact"],
+      "synonyms": ["suffers", "undergoes", "is affected by"],
+      "inverse": "is_experienced_by",
+      "description": "Relationship between an economic sector or system and the climate impact it receives."
+    },
+    "BENEFITS": {
+      "id": "benefits",
+      "name": "benefits",
+      "domain": ["adaptation_outcome"],
+      "range": ["social_group", "sector"],
+      "synonyms": ["favors", "improves", "supports", "protects"],
+      "inverse": "is_benefited_by",
+      "description": "Final positive effect of an adaptation outcome on a group or sector."
+    },
+	"OCCURS_IN": {
+      "id": "occurs_in",
+      "name": "occurs in",
+      "domain": ["climate_hazard", "impact"],
+      "range": ["location"],
+      "synonyms": ["takes place in", "happens in", "observed in"],
+      "description": "Spatial relationship specifically for physical events and their resulting consequences."
+	 },
+	"IS_IMPLEMENTED_IN": {
+      "id": "is_implemented_in",
+      "name": "is implemented in",
+      "domain": ["adaptation_measure"],
+      "range": ["location"],
+      "synonyms": ["deployed in", "installed in", "executed in"],
+      "description": "Spatial relationship for human-led actions, policies, or physical infrastructures."
+    },	
+    "IS_LOCATED_IN": {
+      "id": "is_located_in",
+      "name": "is located in",
+      "domain": ["social_group"],
+      "range": ["location"],
+      "synonyms": ["resides in", "settled in", "found in"],
+      "description": "Spatial relationship for the geographical position of populations or social groups."
+    },
+	"TARGETS": {
+      "id": "targets",
+      "name": "targets",
+      "domain": ["adaptation_measure"],
+      "range": ["social_group"],
+      "synonyms": ["aimed at", "focuses on", "prioritizes"],
+      "inverse": "is_targeted_by",
+      "description": "Indicates the specific population or vulnerable group that a measure intends to protect or support."
+    },
+	"APPLIES_TO": {
+      "id": "applies_to",
+      "name": "applies to",
+      "domain": ["adaptation_measure"],
+      "range": ["sector"],
+      "synonyms": ["implemented in", "relevant for", "concerns"],
+      "inverse": "has_measure",
+      "description": "Connects an adaptation measure to the specific economic or functional sector where it is deployed."
+    },
+	"CASCADES_TO": {
+      "id": "cascades_to",
+      "name": "cascades to",
+      "domain": ["impact"],
+      "range": ["impact"],
+      "synonyms": ["exacerbates", "triggers further", "leads to secondary"],
+      "description": "Transitive relationship to model risk chains and secondary impacts."
+    },
+    "PART_OF": {
+      "id": "part_of",
+      "name": "part of",
+      "domain": [
+        "urban_infrastructure",
+        "urban_services",
+        "urban_governance",
+        "transport_infrastructure",
+        "road_infrastructure",
+        "rail_infrastructure",
+        "air_transport_infrastructure",
+        "port_and_maritime_infrastructure",
+        "telecommunication_networks",
+        "forest_ecosystem",
+        "wetland_ecosystem",
+        "coastal_ecosystem",
+        "mangrove_ecosystem",
+        "freshwater_ecosystem",
+        "marine_ecosystem"
+      ],
+      "range": [
+        "urban_system",
+        "infrastructure_and_networks",
+        "transport_infrastructure",
+        "ecosystems"
+	  ],
+      "synonyms": ["component of", "subpart of"],
+      "inverse": "has_part",
+      "description": "Structural relationship where a smaller subsystem or component belongs to a larger system."
+	},
+	"HAS_PART": {
+      "id": "has_part",
+      "name": "has part",
+      "domain": [
+        "urban_system",
+        "infrastructure_and_networks",
+        "transport_infrastructure",
+        "ecosystems"
+      ],
+      "range": [
+        "urban_infrastructure",
+        "urban_services",
+        "urban_governance",
+        "transport_infrastructure",
+        "road_infrastructure",
+        "rail_infrastructure",
+        "air_transport_infrastructure",
+        "port_and_maritime_infrastructure",
+        "telecommunication_networks",
+        "forest_ecosystem",
+        "wetland_ecosystem",
+        "coastal_ecosystem",
+        "mangrove_ecosystem",
+        "freshwater_ecosystem",
+        "marine_ecosystem"
+      ],
+      "synonyms": ["includes", "composed of"],
+      "inverse": "part_of",
+      "description": "Structural relationship where a larger system includes smaller subsystems or components."
+	}
+  }
+}
